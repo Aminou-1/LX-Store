@@ -3,7 +3,13 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 const cartItemsDiv = document.getElementById("cart-items");
 const totalPriceDiv = document.getElementById("total-price");
+const out = document.querySelector(".checkout-btn");
 
+out.addEventListener("click",()=>{
+    localStorage.clear();
+    window.location.reload();
+    window.alert("Checkout successfuly completed!");
+});
 
 function displayCart() {
     cartItemsDiv.innerHTML = "";
@@ -46,5 +52,6 @@ function updateQty(index, change) {
     localStorage.setItem("cart", JSON.stringify(cart));
     displayCart();
 }
+
 
 displayCart();
