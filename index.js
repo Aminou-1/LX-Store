@@ -5,10 +5,11 @@ console.log(user,pass,btn)
 
 
 btn.addEventListener("click", ()=>{
-    if(user.value==="Amine" && pass.value==="251008"){
+    if(user.value==="Amine" && pass.value==="151008"){
     window.location.href="store/index.html";}
     else{
     window.alert("Invalid information, please try again");
 }
 });
+
 
